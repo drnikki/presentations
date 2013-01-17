@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Best Practices for Development Teams - SANDCamp 2013</title>
+  <meta content=
+  "A framework for easily creating beautiful presentations using HTML" name=
+  "description">
+  <meta content="Hakim El Hattab" name="author">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name=
+  "apple-mobile-web-app-status-bar-style">
+  <link href="css/reveal.min.css" rel="stylesheet">
+  <link href="css/theme/simple.css" id="theme" rel="stylesheet">
+  <!-- For syntax highlighting -->
+  <link href="lib/css/zenburn.css" rel="stylesheet">
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+  <script>
+          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script><!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+
+    <div class="slides">
+      <section>
+        <h2>Best Practices for (Drupal) Development Teams</h2>
+
+        <p><small>Created by <a href="http://www.drnikki.org">Nikki Stevens</a>
+        / <a href="http://twitter.com/drnikki">@drnikki</a></small></p>
+      </section>
+
+      <section>
+        <h3>Hi!</h3>
+
+        <ul>
+          <li>Lead Developer, DivX, WorkHabit</li>
+          <li>Technical Architect, LBi NYC</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>What's a team?</h3>
+        <ul>
+          <li>Developers</li>
+          <li>1+ PM</li>
+          <li>Tech lead</li>
+          <li>3 – 4 creative / editorial / UX</li>
+          <li>Clients / stakeholders</li>
+          <li>QA</li>
+          <li>Mystery people</li>
+        </ul>
+      </section>
+
+      <section>
+        <section>
+          <h1>Your team is everyone you talk to about the project.</h1><!-- thinking holistically -->
+        </section>
+        <section>
+          <!-- http://www.techpageone.com/wp-content/uploads/2012/12/neighborhoodlist1.jpg -->
+          <p><img src="img/neighborhoodlist1.jpg"></p>
+        </section>
+      </section>
+
+      <section>
+        <h2>What's the <br />
+           VERY BIG REAL LIFE GOAL?</h2>
+        <ul>
+          <li class="fragment">SHIP</li><!-- SHIP THE PRODUCT -->
+          <li class="fragment">Keep a team to ship again</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>What's the touchy feely goal?</h3>
+
+        <ul>
+          <li>Transparency</li>
+          <li>Avoid confusion and frustration</li>
+          <li>Prevent burnout</li>
+        </ul>
+      </section>
+
+      <section><!-- is your team ok? (probably not) -->
+        <section>
+          <h3>Is your team okay?</h3>
+          <ul>
+            <li class="fragment">Here, just use my login.</li>
+            <li class="fragment">Um, we're waiting on the client. </li>
+            <li class="fragment">I've got that in an email somewhere. I'll forward it to you.</li>
+            <li class="fragment">Did you not see the updated comps?</li>
+            <li class="fragment">Let me check basecamp.  It's on basecamp</li>
+            <li class="fragment">Basecamp</li>
+        </section>  
+        <section>
+          <h3>Yes, but</h3>
+          <img src="img/1955-bell-curve1.jpg">
+        </section>
+      </section>
+
+      <!-- philosophies and "state" goals -->
+
+      <section>
+        <h3>Things You Must Value #1</h3>
+          <h2>Transparency</h2>
+          <!-- what are you, a fucking russian spy? -->
+      </section>
+
+      <section>
+        <h3>Things You Must Value #2</h3>
+          <h2>Structure</h2>
+          <!-- what are you, a stoned art student? -->
+      </section>
+
+      <section>
+        <h3>Things You Must Value #3</h3>
+          <h2>Future You</h2>
+          <!-- future you needs you. -->
+      </section>
+
+      <section><!-- TYMH 1 -->
+        <h3>Things You Must Have #1</h3>
+        <h2>Version Control</h2>
+        <p class="fragment">(Use git.)</p>
+      </section>
+
+      <section><!-- TYMH 2-->
+        <section>
+          <h3>Things You Must Have #2</h3>
+            <h2>A Ticketing System</h2>
+        </section>
+        <section>
+          <h3>Minimum functionality</h3>
+          <ul>
+            <li class="fragment">Connect to version control</li>
+            <img class="fragment" src="img/github-commit.png" />
+            <li class="fragment">Connect to a wiki-type thing</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Useful combinations</h3>
+          <ul>
+            <li class="fragment">Github</li>
+            <li class="fragment">Local git install + gitlab</li>
+            <li class="fragment">Local git + hosted JIRA</li>
+            <li class="fragment">Hosted subversion + hosted JIRA</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Harmful combinations</h3>
+          <ul>
+            <li class="fragment">Anything + basecamp</li>
+            <li class="fragment">Anything + google docs</li>
+            <li class="fragment">Anything homemade</li>
+            <li class="fragment">Anything + nothing</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Who me?</h3>
+          Ticketing is for EVERYONE
+          PMS on team
+          PMS can have tickets
+          Need copy give pm tax
+          They attach
+          I commit with ref to tax
+          Feeds into pm change log.
+          Eeeeasy
+        </section>
+      </section>
+
+      <section><!-- TMYH 3 -->
+        <section>
+            <h3>Things You Must Have #3</h3>
+              <h2><em>ONE</em> Centralized Documentation Thing</h2>
+              <p class="fragment">(Not basecamp.)</p>
+        </section>
+
+        <section>
+          <h1 class="centered">Skype and email are not
+          reliable sources of information</h1>
+        </section>
+
+        <section>
+          Documentation is for everyone.
+          What the fuck is so secret.?!
+        </section>
+      </section>
+
+      <section>
+        <section>
+            <h3>Dev Server</h3>
+
+            <p>seems like overkill until someone wnats to see your work</p>
+            <p>think about building before you deploy.</p>
+          </section>
+        </section>
+
+        <section>
+          <h3>Development</h3>
+          <p>Work locally, show communally</p>
+          <p><br></p>
+          <p>Work locally, show individually</p>
+        </section>
+
+        <section>
+          <h3>Work locally, show communally</h3>
+          <p><br>
+          <br>
+          <span class="blue">Dev Server:</span> dev.example.com</p>
+        </section>
+
+        <section>
+          <h3>Work locally, show individually</h3>
+          <p><span class="blue">Dev Server:</span> dev.example.com</p>
+          <p><span class="blue">Nikki's Server:</span>
+          nstevens.dev.example.com</p>
+          <p><span class="blue">Nikki’s work on X:</span><br>
+          branchX.nstevens.dev.example.com</p>
+        </section>
+      </section>
+
+      <section><!-- TMYH #5 -->
+        <section>
+          <h3>Things You Must Have #5</h3>
+          <h2>Automation</h2>
+        </section>
+
+        <section>
+          <p><span class="green">Easy:</span> Information Sharing</p>
+          <img src="img/ae-jira.png" />
+        </section>
+
+        <section>
+          Make questions self-answerable
+
+          Reducing time interacting
+          When is next build
+          when is next push
+          when are you going to fix the comp
+          What changed last build
+          what changed with latest design
+          Is it too late to whatever
+
+          these are 
+          -temporal
+          -material
+          or qa/approval related.
+        <section>
+
+        <section>
+          <p><span class="blue">Easyish:</span> Developer tools</p>
+        </section>
+
+        <section>
+          <p><span class="blue">Easyish:</span> Developer tools</p>
+        </section>
+
+        <section>
+          <p><span class="blue">Easyish:</span> Developer tools</p>
+        </section>
+      </section>
+
+      <section>
+        <h3>Things You Must Have</h3>
+        <ol>
+          <li>Version Control</li>
+          <li>Ticketing System</li>
+          <li>Centralized Documentation</li>
+          <li>Development Servers</li>
+          <li>Automation</li>
+        </ol>
+      </section>
+
+      <section>
+        <h1>When should we do this? </h1>
+          <!-- Now, kids, now.  
+          Build system
+          Protect future u
+          U have lesa time now than past u
+          Now u has more time than future u
+          When is the right time to quit smoking?
+          Now bro. Now. There is never a perfect time. Biz ppl say oh later next client. Noooioiope
+          Then you're 60 and a subway ad.
+          I still smoke sometimes.
+          But I always have a build system
+
+
+          ## FUTURE YOU
+          protect future you 
+          protect yourself from yourself and each other -->
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section>
+        <h1 class="centered">Thank you!</h1>
+        <h3><a href="http://twitter.com/drnikki">@drnikki</a>
+      </section>
+
+
+    </div>
+  </div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+  </script>
+</body>
+</html>
