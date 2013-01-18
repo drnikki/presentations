@@ -1,207 +1,159 @@
 <!DOCTYPE html>
 
-<!--
-  Google HTML5 slide template
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-  Authors: Luke Mahé (code)
-           Marcin Wichary (code and design)
-           
-           Dominic Mazzoni (browser compatibility)
-           Charles Chen (ChromeVox support)
+  <title>Best Practices for Development Teams - SANDCamp 2013</title>
+  <meta content=
+  "A framework for easily creating beautiful presentations using HTML" name=
+  "description">
+  <meta content="Hakim El Hattab" name="author">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name=
+  "apple-mobile-web-app-status-bar-style">
+  <link href="css/reveal.min.css" rel="stylesheet">
+  <link href="css/theme/simple.css" id="theme" rel="stylesheet">
+  <!-- For syntax highlighting -->
+  <link href="lib/css/zenburn.css" rel="stylesheet">
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
 
-  URL: http://code.google.com/p/html5slides/
--->
+  <script>
+          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script><!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
 
-<html>
-  <head>
-    <title>Teams best practices - NYC Drupal meetup </title>
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
 
-    <meta charset='utf-8'>
-    <script
-      src='slides.js'></script>
-  </head>
-  
-  <style>
-    /* Your individual styles here, or just use inline styles if that’s
-       what you want. */
-    
-    
-  </style>
+    <div class="slides">
+      <section>
+        <h2>Automated Testing for non-developers</h2>
 
-  <body style='display: none'>
+        <p><small><a href="http://www.drnikki.org">Nikki Stevens</a>
+        / <a href="http://twitter.com/drnikki">@drnikki</a></small></p>
+      </section>
 
-    <section class='slides layout-regular template-drupalmeetup'>
-      
-      <!-- Your slides (<article>s) go here. Delete or comment out the
-           slides below. -->
-        
-        
-      <article>
-        <h1>
-          Best Practices for (Drupal)          <br>
-          Development Teams
-        </h1>
-        <p><br /></p>
-        <p>
-          Nikki Stevens          <br>
-          June 6, 2012
-        </p>
-        <p><br /></p>
-        <p>@drnikki</p>
-      </article>
-      
-      <article>
-        <h3>This matters to you</h3>
-        <p>
-          <ul>
-            <li>Your team is dysfunctional</li>
-            <li>The team you're joining is dysfunctional</li>
-          </ul>
-        </p>
-      </article>
+      <section>
+        <h3>Hi!</h3>
 
-      <article>
-        <h3>
-          What's a team?
-        </h3>
-    
- 
         <ul>
-          <li>Developers
-          <li>1+ PM
-          <li>Tech lead
-          <li>3 – 4 creative / editorial / UX
-          <li>Clients / stakeholders
-          <li>QA
-          <li>Mystery people
+          <li>Lead Developer, DivX, WorkHabit</li>
+          <li>Technical Architect, LBi NYC</li>
+        </ul>
+        <p><a href="http://twitter.com/drnikki">@drnikki</a></p>
+        <p>github & drupal.org - drnikki </p>
+      </section>
+
+      <section>
+        <h3>In the next hour</h3>
+        <ul>
+          <li>Automated Testing</li>
+          <li>Why it's a Good Thing</li>
+          <li>First steps</li>
+        </ul>
+      </section>
+        <section>
+          <h1>...for</h1>
+          <ul>
+            <li>site builders</li>
+            <li>just-starting site administrators</li>
+            <li>just starting module builders</li>
           </ul>
+        </section>
 
-      </article>
-
-      <article class='smaller'>
- 
-        <h1 clas="centered" style="line-height: 90px">Your team is everyone you talk to about the project.</h1>
-      </article>
-
-      <article>
-        <h3>What's the project?</h3>
-        <p><br /></p>
-        <img class="centered" src="blog_village_mobile1.jpg" />
-        <div class="source centered">Random Google Image Search</div>
-        
-      </article>
-
-      <article>
-        <h3>
-          What's the goal?
-        </h3>
-        <ul class="build larger">
-          <li>
-            Avoid confusion and frustration
-          </li>
-          <li>
-            Be transparent
-          </li>
-          <li>
-            Prevent burnout
-          </li>
+      <section>
+        <h1>Types of testing</h1>
+        <ul>
+          <li>unit tests</li>
+          <li>smoke tests</li>
+          <li>regression tests</li>
+          <li>black box testing</li>
         </ul>
-      </article>
+      </section>
 
-      <article>
-        <h3>
-          Prerequisites
-        </h3>
-        <ul class="build larger">
-          <li>
-            Version control
-          </li>
-          <li>
-            Dev server
-          </li>
-          <li>
-            Deployment process
-          </li>
-          <li>
-            Ticketing and docs
-          </li>
-          <li>
-            Individual user accounts
-          </li>
-          <li>
-            (project plan)
-          </li>
+      <section>
+        <h1>Automated Testing</h1>
+        <blockquote>Test automation is the use of software to control the execution of tests, the comparison of actual outcomes to predicted outcomes, the setting up of test preconditions, and other test control and test reporting functions.[1] Commonly, test automation involves automating a manual process already in place that uses a formalized testing process.</blockquote>
+
+        <p>Compare with Manual testing.</p>
+      </section>
+
+      <section>
+        <h1>Selenium</h1>
+        <ul>
+          <li>browser automation</li>
+          <li>via script on server</li>
+          <li>via IDE running locally</li>
         </ul>
-      </article>
+      </section>
 
-      <article>   
-        <h1 class="centered" style="line-height: 90px">Skype and email are not reliable sources of information</h1>
-      </article>
-      
-      
-      <article>
-        <h3>
-          Development
-        </h3>
-        
-        <p>Work locally, show communally</p>
-        <p><br /></p>
-        <p>Work locally, show individually</p>
-      </article>
-        
-        
-        
-      <article>
-        <h3>
-          Work locally, show communally
-        </h3>
-        
-        <p><br /><br /><span class="blue">Dev Server:</span> dev.example.com</p>
-          
+      <section>
+        <h1>Things We Can Test</h1>
+        <ul>
+          <li>menus</li>
+          <li>contexts</li>
+          <li>panels</li>
+          <li>image styles</li>
+          <li>blocks</li>
+          <li>views</li>
+        </ul>
+      </section>
 
-      </article>
-        
-      
-      <article>
-        <h3>
-          Work locally, show individually
-        </h3>
-        
-        <p><span class="blue">Dev Server:</span> dev.example.com</p>
+      <section>
+        <h1>Is this worth writing a test for</h1>
+        <p>yes.</p>
+      </section>
 
-        <p><span class="blue">Nikki's Server:</span> nstevens.dev.example.com</p>
 
-        <p><span class="blue">Nikki’s work on X:</span><br /> branchX.nstevens.dev.example.com</p>
-        
-      </article>
-        
-        
-        
-      <article>
-        <h3>
-          Automation
-        </h3>
-        
-        <div class="build">
-          <p><span class="green">Easy:</span> Information Sharing</p>
-          
-          <p><span class="blue">Easyish:</span> Developer tools</p>
-                  
-          <p><span class="blue">Hardish:</span> Developer tools</p>
-          
-          <p><span class="red">Hard:</span> Continuous Delivery</p>
-        </div>
-      
-      </article>
 
-      
-      <article>
-        <h1 class="centered">
-          Thank you!
-        </h1>
-      </article>
 
-    </section>
 
-  </body>
+
+
+
+
+
+
+
+
+
+
+      <section>
+        <h1 class="centered">Thank you!</h1>
+        <h3><a href="http://twitter.com/drnikki">@drnikki</a>
+      </section>
+
+
+    </div>
+  </div><script src="lib/js/head.min.js"></script><script src="js/reveal.min.js"></script><script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+  </script>
+</body>
 </html>
