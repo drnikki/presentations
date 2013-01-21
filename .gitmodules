@@ -1,0 +1,6 @@
+[submodule "sandcamp_testing/lib/sideflow"]
+	path = sandcamp_testing/lib/sideflow
+	url = git://github.com/darrenderidder/sideflow.git
+[submodule "sandcamp_testing/lib/sideflow_forked"]
+	path = sandcamp_testing/lib/sideflow_forked
+	url = git@github.com:drnikki/sideflow.git

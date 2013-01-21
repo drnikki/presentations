@@ -4,28 +4,59 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://sandcamp2013.drnikki.org/" />
-<title>logout</title>
+<title>search_variety</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
+<tr><td rowspan="1" colspan="3">search_variety</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/node</td>
+	<td>/</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-search-block-form--2</td>
+	<td>dog</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=li.menu-14.last &gt; a</td>
+	<td>id=edit-submit</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTextNotPresent</td>
-	<td></td>
-	<td>&quot;Logout&quot;</td>
+	<td>type</td>
+	<td>id=edit-search-block-form--2</td>
+	<td>dog 2</td>
 </tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit-3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-search-block-form--2</td>
+	<td>dog 3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit--3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-keys</td>
+	<td>dog 4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit</td>
+	<td></td>
+</tr>
+
 </tbody></table>
 </body>
 </html>

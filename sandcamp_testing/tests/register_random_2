@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://sandcamp2013.drnikki.org/" />
+<title>create_user_random_username</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create_user_random_username</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/user/register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;asdf&quot; + Math.floor(Math.random() * 1337) + &quot;asdf&quot;</td>
+	<td>userName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${userName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-name</td>
+	<td>${userName}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{&quot;nikkilstevens+&quot; + Math.floor(Math.random() * 1337) + &quot;@gmail.com&quot;;}</td>
+	<td>userEmail</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-mail</td>
+	<td>javascript{&quot;nikkilstevens+&quot; + Math.floor(Math.random() * 1337) + &quot;@gmail.com&quot;;}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-pass-pass1</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=edit-pass-pass2</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>My account</td>
+</tr>
+</tbody></table>
+</body>
+</html>

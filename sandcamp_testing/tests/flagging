@@ -3,29 +3,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://sandcamp2013.drnikki.org/" />
-<title>logout</title>
+<link rel="selenium.base" href="http://sandcamp2013.drnikki.org" />
+<title>flagging</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
+<tr><td rowspan="1" colspan="3">flagging</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/node</td>
+	<td>/node/2</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>css=li.menu-14.last &gt; a</td>
+	<td>click</td>
+	<td>link=Housebroken</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyTextNotPresent</td>
+	<td>verifyTextPresent</td>
+	<td>link=Whoops</td>
 	<td></td>
-	<td>&quot;Logout&quot;</td>
 </tr>
+
 </tbody></table>
 </body>
 </html>
